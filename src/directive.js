@@ -44,7 +44,7 @@ const init = function (el, binding, vnode) {
 
     target.md = function (e) {
       console.log('scroll mouse down')
-      e.preventDefault()
+      // e.preventDefault()
       const isMouseEvent = e instanceof window.MouseEvent
       // The coordinates of the mouse pointer compared to the page when the mouse button is clicked on an element
       const pageX = isMouseEvent ? e.pageX : e.touches[0].pageX
@@ -88,6 +88,7 @@ const init = function (el, binding, vnode) {
     }
 
     target.mu = function (e) {
+      console.log('scroll mouse up')
       pushed = 0
       if (isDragging) {
         u.emitEvent(vnode, 'dragscrollend')
@@ -103,6 +104,7 @@ const init = function (el, binding, vnode) {
     }
 
     target.mm = function (e) {
+      console.log('scroll mouse move')
       const isMouseEvent = e instanceof window.MouseEvent
       let newScrollX, newScrollY
       const eventDetail = {}
