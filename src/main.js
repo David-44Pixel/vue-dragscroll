@@ -13,6 +13,7 @@ const VueDragscroll = {
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
+  console.log('vue drag scroll init')
   window.VueDragscroll = VueDragscroll
   window.Vue.use(VueDragscroll)
 }
