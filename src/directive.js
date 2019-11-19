@@ -43,6 +43,7 @@ const init = function (el, binding, vnode) {
     let isClick = false // workaround to handle click event from touch
 
     target.md = function (e) {
+      console.log('scroll mouse down')
       e.preventDefault()
       const isMouseEvent = e instanceof window.MouseEvent
       // The coordinates of the mouse pointer compared to the page when the mouse button is clicked on an element
